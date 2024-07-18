@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 300px; 
+  background-color: #1f72ca;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+/*   display: flex;
+  flex-direction: column; */
+  color: white;
+  border: 1px solid white;
+  padding: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.sidebar-link {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-link:hover {
+  background-color: #1a5ca1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.sidebar-footer {
+  list-style: none;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-actions input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cards {
+  display: flex;
+ /*  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+ 
+  display: flex; */
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  flex-grow: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+
+
+
+.green-text {
+  color: green;
+  font-size: x-small;
+  border: 2px;
+}
+
+.charts {
+  display: flex;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.chart {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  height: 38.69vh;
+}
+.email-phone{
+  display: flex;
+  flex-direction: horizontal;
+  gap:30px;
+}
+.social-links{
+  display: flex;
+  flex-direction: horizontal;
+  gap:158px;
+}
+.emsection {
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+  
+}
+.pie-chart {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  height: calc(100vh - 60px);
+  width: calc(45% * 2 + 45px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.green-phone-icon {
+  color: green;
+}
+
+.instagram-icon {
+  color: #E4405F;
+}
+
+.profile-box {
+  width: calc(45% * 2 + 61px);
+  padding: 10px;
+  background-color: white;
+
+  height: calc(100vh - 50px);
+ 
+}
+
+.addp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  height: calc(100vh - 50px);
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.icon-container {
+
+  cursor: pointer;
+  align-items: center;
+}
+
+.plus-icon {
+  font-size: 24px;
+}
+
+.icon i {
+  background-color: #6dea6b;
+  border-radius: 50%;
+  padding: 10px; 
+  color: #ffffff;
+  width: 30px; 
+  height: 30px;
+  display: inline-block; 
+  text-align: center; 
+  line-height: 30px; 
+}
+.add-profile-text {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.contact-card {
+  background-color: white;
+
+  padding: 10px;
+  border-radius: 10px;
+  height: calc(100vh - 60px);
+  overflow-y: hidden;
+}
+
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.chart h3 {
+  margin: 0 0 20px;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 1;
+  }
+
+  .main-content {
+    order: 2;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cards, .charts {
+    flex-direction: column;
+  }
+
+  .chart {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .user-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-actions input {
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .profile-box, .addp {
+    padding: 5px;
+  }
+
+  .add-profile-text {
+    padding: 5px 10px;
+  }
+}
